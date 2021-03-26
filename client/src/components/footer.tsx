@@ -5,7 +5,13 @@ import { colors, ApolloIcon } from '../styles';
 /**
  * Footer is useless component to make our app look a little closer to a real website!
  */
-const Footer = ({ children }) => {
+
+
+//  type PropType = {
+//   children?: React.ReactNode 
+// }
+
+export default function(): JSX.Element {
   return (
     <FooterContainer>
       2021 ©{' '}
@@ -16,7 +22,7 @@ const Footer = ({ children }) => {
   );
 };
 
-export default Footer;
+
 
 /** Footer styled components */
 const FooterContainer = styled.div({

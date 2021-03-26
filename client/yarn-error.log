@@ -1,0 +1,81 @@
+Arguments: 
+  /Users/mikeconnor/.nvm/versions/node/v15.10.0/bin/node /usr/local/Cellar/yarn/1.22.10/libexec/bin/yarn.js install
+
+PATH: 
+  /Users/mikeconnor/.pyenv/bin:/usr/local/sbin:/usr/local/sbin:/Users/mikeconnor/.pyenv/shims:/Users/mikeconnor/.rbenv/shims:/Users/mikeconnor/.nvm/versions/node/v15.10.0/bin:/Users/mikeconnor/.nvm/versions/node/v15.10.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mikeconnor/Library/Python/3.9/bin:/usr/local/MacGPG2/bin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Apple/usr/bin:/Users/mikeconnor/.pyenv/bin:/usr/local/sbin:/Users/mikeconnor/.pyenv/shims:/Users/mikeconnor/.rbenv/shims:/Users/mikeconnor/.nvm/versions/node/v15.10.0/bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  15.10.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/mikeconnor/Documents/codeArchive/odyssey/odyssey-lift-off-part1/client/package.json: Unexpected token , in JSON at position 1164
+      at JSON.parse (<anonymous>)
+      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:310:30)
+      at /usr/local/Cellar/yarn/1.22.10/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+  	"name": "castronauts-server-complete",
+  	"version": "1.0.0",
+  	"private": true,
+  	"description": "front-end demo app for Apollo's lift-off course",
+  	"dependencies": {
+  		"@apollo/client": "^3.3.13",
+  		"@apollo/space-kit": "^7.11.0",
+  		"@emotion/core": "^10.0.34",
+  		"@emotion/styled": "^10.0.27",
+  		"@reach/router": "^1.3.4",
+  		"graphql": "^15.5.0",
+  		"react": "^16.13.1",
+  		"react-dom": "^16.13.1",
+  		"react-emotion": "^10.0.0",
+  		"react-markdown": "^4.3.1",
+  		"react-player": "^2.6.0",
+  		"react-scripts": "^4.0.1"
+  	},
+  	"scripts": {
+  		"start": "react-scripts start",
+  		"build": "react-scripts build",
+  		"test": "react-scripts test",
+  		"eject": "react-scripts eject"
+  	},
+  	"browserslist": {
+  		"production": [
+  			">0.2%",
+  			"not dead",
+  			"not op_mini all"
+  		],
+  		"development": [
+  			"last 1 chrome version",
+  			"last 1 firefox version",
+  			"last 1 safari version"
+  		]
+  	},
+  	"devDependencies": {
+  		"@testing-library/jest-dom": "^4.2.4",
+  		"@testing-library/react": "^9.3.2",
+  		"@testing-library/user-event": "^7.1.2",
+  		"@types/reach__router": "^1.3.7",
+  		"@typescript-eslint/eslint-plugin": "^4.19.0",
+  		"@typescript-eslint/parser": "^4.19.0",
+  		"apollo": "^2.30.2",,
+  		"typescript": "^4.2.3"
+  	},
+  	"main": "src/index.js",
+  	"author": "Raphael Terrier @R4ph-t",
+  	"license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

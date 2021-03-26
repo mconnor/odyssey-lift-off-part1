@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import React from 'react';
 import styled from '@emotion/styled';
 import { colors, widths } from '../styles';
@@ -7,11 +8,17 @@ import ReactPlayer from 'react-player/youtube';
 import ModulesNav from './modules-navigation';
 import MarkDown from './md-content';
 
+import { TrackType, ModulesType} from '../types'
+
+type PropT = { 
+  track: TrackType
+  module: ModulesType
+}
 /**
  * Module Detail renders content of a given module:
  * Video player, modules navigation and markdown content
  */
-const ModuleDetail = ({ track, module }) => {
+const ModuleDetail = ({ track, module }: PropT ):JSX.Element => {
   const { videoUrl, title, content } = module;
   const { width } = useWindowDimensions();
 
@@ -44,7 +51,7 @@ const TopSection = styled.div({
   borderBottom: `solid 1px ${colors.pink.base}`,
 });
 
-const TopContainer = styled.div(({ totalWidth }) => ({
+const TopContainer = styled.div(({ totalWidth }: { totalWidth: number }) => ({
   display: 'flex',
   flexDirection: 'row',
   alignSelf: 'center',

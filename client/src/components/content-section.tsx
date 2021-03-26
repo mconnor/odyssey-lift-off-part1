@@ -6,11 +6,15 @@ import { widths, colors } from '../styles';
  * Content Section component renders content (mainly text/mdown based)
  * for course detail and lesson detail
  */
-const ContentSection = ({ children }) => {
+
+type PType = {
+  children: React.ReactNode
+}
+export default function ContentSection ({ children }: PType): JSX.Element {
   return <ContentDiv>{children}</ContentDiv>;
 };
 
-export default ContentSection;
+
 
 /** ContentSection styled component */
 const ContentDiv = styled.div({

@@ -2,12 +2,25 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { colors, mq } from '../styles';
 import { humanReadableTimeFromSeconds } from '../utils/helpers';
-
+import { TrackType } from '../types'
 /**
  * Track Card component renders basic info in a card format
  * for each track populating the tracks grid homepage.
  */
-const TrackCard = ({ track }) => {
+
+// type TrackType = {
+//   track: {id: string
+//     title: string
+//     author :{
+//       id: string
+//       name: string
+//       photo: string
+//     }
+//     thumbnail: string
+//     length: number
+//     modulesCount: number}
+// }
+ export default function TrackCard ({ track }:TrackType): JSX.Element {
   const { title, thumbnail, author, length, modulesCount } = track;
 
   return (
@@ -34,7 +47,7 @@ const TrackCard = ({ track }) => {
   );
 };
 
-export default TrackCard;
+
 
 /** Track Card styled components */
 const CardContainer = styled.div({

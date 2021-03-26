@@ -18,13 +18,15 @@ import MarkDown from './md-content';
  * author, length, number of views, modules list, among other things.
  * It provides access to the first module of the track.
  */
-const TrackDetail = ({ track }) => {
+
+import { TrackType  } from '../types'
+export default function TrackDetail ({ track }: TrackType):JSX.Element{
   const {
     title,
     description,
     thumbnail,
     author,
-    length,
+   
     modulesCount,
     modules,
     numberOfViews,
@@ -91,7 +93,7 @@ const TrackDetail = ({ track }) => {
   );
 };
 
-export default TrackDetail;
+
 
 /** Track detail styled components */
 const CoverImage = styled.img({

@@ -1,31 +1,45 @@
-import React from 'react';
+import React, { PropsWithChildren} from 'react';
 import styled from '@emotion/styled';
 import { LoadingSpinner } from '@apollo/space-kit/Loaders/LoadingSpinner';
+
 
 /**
  * Query Results conditionally renders Apollo useQuery hooks states:
  * loading, error or its children when data is ready
  */
-const QueryResult = ({ loading, error, data, children }) => {
+import { ApolloError } from '@apollo/client'
+
+type PropT = PropsWithChildren<{
+  loading: boolean
+  error: ApolloError
+  data: Record<string, unknown>
+
+}>
+
+export default function QueryResult({ loading, error, data, children }:PropT): JSX.Element  {
+
+
   if (error) {
-    return <p>ERROR: {error.message}</p>;
+    return (<p>ERROR</p>)
   }
+  
   if (loading) {
     return (
-      <SpinnerContainer>
-        <LoadingSpinner data-testid="spinner" size="large" theme="grayscale" />
-      </SpinnerContainer>
-    );
+        <SpinnerContainer>
+          <LoadingSpinner data-testid="spinner" />
+        </SpinnerContainer>
+      );
   }
   if (!data) {
-    return <p>Nothing to show...</p>;
-  }
+    return (<p>Nothing</p>)
+   } 
+
   if (data) {
-    return children;
+    return <>{children}</>;
   }
 };
 
-export default QueryResult;
+
 
 /** Query Result styled components */
 const SpinnerContainer = styled.div({

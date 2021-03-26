@@ -1,5 +1,5 @@
 import React from 'react';
-import { Header, Footer } from '../components';
+import { Header, Footer } from './';
 import styled from '@emotion/styled';
 import { widths, unit } from '../styles';
 
@@ -7,7 +7,16 @@ import { widths, unit } from '../styles';
  * Layout renders the full page content:
  * with header, Page container and footer
  */
-const Layout = ({ fullWidth, children, grid }) => {
+
+
+
+type PropType = {
+  grid: boolean
+  fullWidth?: boolean
+  children?: React.ReactNode
+}
+
+const Layout = ({ fullWidth= true, children, grid }: PropType  ):JSX.Element => {
   return (
     <>
       <Header />
@@ -22,7 +31,7 @@ const Layout = ({ fullWidth, children, grid }) => {
 export default Layout;
 
 /** Layout styled components */
-const PageContainer = styled.div((props) => ({
+const PageContainer = styled.div((props: PropType) => ({
   display: 'flex',
   justifyContent: props.grid ? 'center' : 'top',
   flexDirection: props.grid ? 'row' : 'column',

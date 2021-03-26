@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {ReactNode} from 'react';
 import { colors, widths } from '../styles';
 import styled from '@emotion/styled';
 import { Link } from '@reach/router';
@@ -8,7 +8,12 @@ import logo from '../assets/space_cat_logo.png';
  * Header renders the top navigation
  * for this particular tutorial level, it only holds the home button
  */
-const Header = ({ children }) => {
+
+type PropType = {
+  children?: ReactNode
+}
+
+export default function Header ({ children }: PropType): JSX.Element {
   return (
     <HeaderBar>
       <Container>
@@ -31,7 +36,7 @@ const Header = ({ children }) => {
   );
 };
 
-export default Header;
+
 
 /** Header styled components */
 const HeaderBar = styled.div({
